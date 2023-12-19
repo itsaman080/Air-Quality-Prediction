@@ -1,0 +1,155 @@
+<!DOCTYpe html>
+<html>
+	<head>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+		<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		<style>
+			.homeimg
+			{
+				height:550px;
+			}
+			.container  {
+				max-width: 700px;
+				width: 100%;
+				background-color: #fff;
+				padding: 25px 30px;
+				border-radius: 5px;
+				box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+				font-size: 25px;
+				font-weight: 500;
+				position: relative;
+			  }
+			  .title{
+				font-size: 35px;
+				font-weight: 700;
+				position: relative;
+			  }
+
+			  .content  .user-details{
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-between;
+				margin: 20px 0 12px 0;
+			  }
+			   .user-details  .input-box{
+				margin-bottom: 15px;
+				width: calc(50% - 20px);
+			  }
+
+			  .user-details .input-box input{
+				height: 45px;
+				width: 100%;
+				font-size: 16px;
+				border-radius: 5px;
+				padding-left: 15px;
+				border: 1px solid #ccc;
+				border-bottom-width: 2px;
+			  }
+
+			   .btn-primary{
+
+				 width: 200px;
+				 border-radius: 5px;
+				 color: #fff;
+				 font-size: 18px;
+				 font-weight: 500;
+				 letter-spacing: 1px;
+				 cursor: pointer;
+				 background-color:#aa4f3c ;
+				 margin-right:10px;
+			   }
+			   .btn-danger{
+				width:200px;
+				border-radius: 5px;
+				color: #fff;
+				font-size: 18px;
+				font-weight: 500;
+				letter-spacing: 1px;
+				cursor: pointer;
+				background-color:#aa4f3c ;
+			  }
+
+		</style>
+		<link rel="stylesheet" href="../static/css/styles.css" />
+	</head>
+	<body>
+		<div id="back" style="background-image:url(../static/images/login-bg.png);">
+			<div id="header" style="min-height:100px;background-color:aqua;">
+				<div id="logo" class="col-lg-2">
+					<img src="../static/images/logo.png" class="col-lg-12" style="height:100px;" />
+				</div>
+
+				<div id="empty" class="col-lg-2">
+				</div>
+
+
+				<div id="menu" class="col-lg-5" style="padding-top:30px;font-size:25px;">
+					<a href="dashboard">Dashboard</a> | <a href="dataloader">Dataloader</a> | <a href="predict">Prediction</a> | <a href="planning">Planning</a>
+				</div>
+			</div>
+
+			<div id="content" style="min-height:550px;">
+				<h1 style="text-align:center;">Air Quality Index</h1>
+				<div class="content">
+					<form >
+						<div class="user-details">
+							<div class="col-lg-6">
+								Date :
+								<input type="date" class="form-control" placeholder="enter your name" id="date" /></br>
+							</div>
+							<div class="col-lg-6">
+								Time :
+								<input type="time" class="form-control" placeholder="enter your Age" id="time" /></br>
+							</div>
+<!--
+							<div class="col-lg-6">
+								NOx :
+								<input type="text" class="form-control" placeholder="enter your Cholestrol levels" /></br>
+							</div>
+							<div class="col-lg-6">
+								Co :
+								<input type="text" class="form-control" placeholder="enter your ECG levels" /></br>
+							</div>
+							<div class="col-lg-6">
+								PT08 :
+								<input type="text" class="form-control" placeholder="enter your BP levels" /></br>
+							</div>
+							<div class="col-lg-6">
+								C6H6 :
+								<input type="text" class="form-control" placeholder="enter your Cholestrol levels" /></br>
+							</div> -->
+						</div>
+						<div class="button">
+						  <button type="button" class="btn btn-primary col-lg-3" style="margin-left:30px" id="predict">Predict</button>
+						  <button type="reset" class="btn btn-danger col-lg-3" style="margin-left:50px">Reset</button>
+						</div>
+
+
+
+					</form>
+					<!-- Assuming you have a div element with id 'resultDiv' where you want to display the data -->
+	 					<div id="resultDiv1" style="min-height:60px;background-color:gray;margin-top: 200px;margin-left: 270px;margin-right: 290px;
+						 font-size: medium;text-align:center;" >
+						 <h4>Data={Co,PT08,NHMC,C6H6,PT081,NOx,PT082,N02,PT083,PT084,T,RH,AH}</h4>
+						 <div id="resultDiv" ></div>
+						</div>
+					</div>
+
+
+			</div>
+
+			<div id="pagefooter" class="footer col-lg-12">
+				©All Rights reserved.
+			</div>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+		<script src="../static/js/prediction.js"></script>
+	</body>
+</html>

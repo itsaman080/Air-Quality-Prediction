@@ -1,0 +1,19 @@
+.footer
+{
+	background-color:grey;
+	height:50px;
+	text-align:center;
+	padding-top:10px;
+	font-size:20px;
+}
+
+body{
+	/* background-image: url('../images/login-bg.png') ; */
+	background-color: white;
+	background-position: absolute;
+	background-repeat: no-repeat;
+}
+/* div#images{
+	height: 100px;
+	width: 100px;
+} */

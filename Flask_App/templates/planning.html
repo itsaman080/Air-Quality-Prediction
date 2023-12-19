@@ -1,0 +1,92 @@
+<!DOCTYpe html>
+<html>
+	<head>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+		<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		<style>
+			.homeimg
+			{
+				height:550px;
+			}
+		</style>
+		<link rel="stylesheet" href="../static/css/styles.css" />
+	</head>
+	<body>
+		<div>
+			<div id="header" style="min-height:100px;background-color:#602c22;">
+				<div id="logo" class="col-lg-2">
+					 <img src="../static/images/logo.png" class="col-lg-12" style="height:100px;" />
+				</div>
+
+				<div id="empty" class="col-lg-5">
+				</div>
+
+
+				<div id="menu" class="col-lg-5" style="padding-top:30px;font-size:25px;">
+					<a href="dashboard">Dashboard</a> | <a href="dataloader">Dataloader</a> | <a href="predict">Prediction</a> | <a href="planning">Planning</a>
+				</div>
+			</div>
+
+			<div id="content" style="min-height:550px;">
+				<h1 style="text-align:center;">Data View Page</h1>
+				<table class="table table-condensed">
+					<thead>
+					  <tr>
+						<th>Date	</th>
+						<th>Time</th>
+						<th>Co	</th>
+						<th>PT08	</th>
+						<th>NMHC	</th>
+						<th>C6H6	</th>
+						<th>PT081	</th>
+						<th>NOx	</th>
+						<th>PT082	</th>
+						<th>N02	</th>
+						<th>PT083	</th>
+						<th>PT084</th>
+						<th>T</th>
+						<th>RH</th>
+						<th>AH</th>
+					  </tr>
+					</thead>
+					<tbody>
+					{% if patdata is defined %}
+						{% for row in patdata %}
+						<tr>
+						<td>{{row[0]}}</td>
+						<td>{{row[1]}}</td>
+						<td>{{row[2]}}</td>
+						<td>{{row[3]}}</td>
+						<td>{{row[4]}}</td>
+						<td>{{row[5]}}</td>
+						<td>{{row[6]}}</td>
+						<td>{{row[7]}}</td>
+						<td>{{row[8]}}</td>
+						<td>{{row[9]}}</td>
+						<td>{{row[10]}}</td>
+						<td>{{row[11]}}</td>
+						<td>{{row[12]}}</td>
+						<td>{{row[13]}}</td>
+						<td>{{row[14]}}</td>
+						</tr>
+						{% endfor %}
+					{% endif %}
+					</tbody>
+				</table>
+			</div>
+
+			<div id="pagefooter" class="footer">
+				©All Rights reserved.
+			</div>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+		<script src="../static/js/controller.js"></script>
+	</body>
+</html>

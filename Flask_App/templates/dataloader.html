@@ -1,0 +1,55 @@
+<!DOCTYpe html>
+<html>
+	<head>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+		<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		<style>
+			.homeimg
+			{
+				height:550px;
+			}
+		</style>
+		<link rel="stylesheet" href="../static/css/styles.css" />
+	</head>
+	<body>
+		<div id="back" style="background-image: url(../static/images/login-bg.png);">
+			<div id="header" style="min-height:100px; background-color: aqua;">
+				<div id="logo" class="col-lg-2">
+					<img src="../static/images/logo.png" class="col-lg-12" style="height:100px;" /> 
+				</div>
+				
+				<div id="empty" class="col-lg-2">
+				</div>
+				
+				
+				<div id="menu" class="col-lg-5" style="min-height: 100px;font-size:25px;">
+					<a href="dashboard">Dashboard</a> | <a href="dataloader">Dataloader</a> | <a href="predict">Prediction</a> | <a href="planning">Planning</a>
+				</div>
+			</div>
+			
+			<div id="content" style="min-height:550px;">
+				<h1 style="text-align:center;">Data Loading Page</h1>
+				<form id="upload-file" method="post" enctype="multipart/form-data">
+				Choose Dataset : 
+				<input type="file" id="dt_file" name="dt_file" class="form-control" accept=".csv" />
+				
+				<input type="button" id="btn_loaddata" name="btn_loaddata" class="btn btn-primary col-lg-4" value="Load Dataset" />
+				
+				<input type="button" id="btn_cleardata" name="btn_cleardata" class="btn btn-danger col-lg-4" style="margin-left:30px;" value="Clear Dataset" />
+				</form>
+			</div>
+			<div id="pagefooter" class="footer">
+				All Rights reserved to SKIT Workshop
+			</div>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		
+		<script src="../static/js/controller.js"></script>
+	</body>
+</html>

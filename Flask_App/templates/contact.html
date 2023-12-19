@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Contact us</title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="../static/css/styles.css" />
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background:url("../static/images/login-bg.png");
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+
+    form {
+      max-width: 400px;
+      margin: auto;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: white;
+      color: black;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    section {
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      color: #333;
+    }
+
+    p {
+      color: #666;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 50%;
+      margin-top: 10px;
+    }
+    #name{
+      border: 2px solid hsla(0, 4%, 5%, 0.7);
+      background:none;
+      border-radius: 2rem;
+    }
+    div#menu{ 
+  padding-top:40px;
+  
+  font-size:30px; 
+  padding-right:50rem; 
+  display: flex; 
+  padding-inline: 5rem;
+}
+div#menu a{
+  text-transform:uppercase;
+  /* background-image:linear-gradient(45deg,rgb(6, 251, 206), rgb(0, 38, 57)); */
+ padding-inline: 5rem; 
+} 
+div#menu a:hover {
+  text-decoration: none;
+  cursor: grab;
+  background-color: aqua;
+}
+  </style>
+</head>
+
+<body>
+  <div id="header" style="min-height:100px; font-size: small;">
+  <div id="menu" class="col-lg-4">
+    <a href="index">Home</a> | <a href="register">Register</a> | <a href="login">Login</a> | <a href="contact">Contact</a>
+  </div>
+</div>
+  <div>
+
+    <h1 style="text-align:center">Contact Us</h1><br>
+
+    <div id="team" class="col-lg-6" style="border:1px solid white;">
+      <h1>Teammates</h1>
+      <div class="col-lg-3" style="border:1px solid white;">
+        <section>
+          <h2>Aman</h2>
+          <img src="../static/images/dummy.jpg" alt="Founder 1" class="dummy_img" style="height:100%;width:50%;">
+          <p>
+            <strong>data:</strong> <br>
+          </p>
+        </section>
+      </div>
+      <div class="col-lg-3" style="border:1px solid white;">
+        <section>
+          <h2>Shreyas</h2>
+          <img src="../static/images/dummy.jpg" alt="Founder 1" class="dummy_img" style="height:100%;width:50%;">
+          <p>
+            <strong>data:</strong> <br>
+          </p>
+        </section>
+      </div>
+
+      <div class="col-lg-3" style="border:1px solid white;">
+        <section>
+          <h2>Rahul</h2>
+          <img src="../static/images/dummy.jpg" alt="Founder 1" class="dummy_img" style="height:100%;width:50%;">
+          <p>
+            <strong>data:</strong> <br>
+          </p>
+        </section>
+      </div>
+      <div class="col-lg-3" style="border:1px solid white;">
+        <section>
+          <h2>Janardan</h2>
+          <img src="../static/images/dummy.jpg" alt="Founder 1" class="dummy_img" style="height:100%;width:50%;">
+          <p>
+            <strong>data:</strong> <br>
+        </section>
+      </div>
+
+    </div>
+
+    <div id="contact" class="col-lg-6" style="border:1px solid white;">
+
+      <form action="/submit_form" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="name" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="name" name="message" rows="4" required></textarea>
+
+        <button type="submit">Submit</button><br>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>
